@@ -1,0 +1,15 @@
+# 발표 스크립트 (비공개 — 웹 배포 제외)
+발표_스크립트.md
+발표_스크립트_시각판.md
+발표_스크립트*.md
+
+# 로컬 개발 도구 설정
+.claude/
+
+# 내부 작업 문서 (공개 배포 제외 — 공개하려면 이 줄을 지우세요)
+DESIGN.md
+deep-research-report.md
+
+# OS / 에디터
+.DS_Store
+Thumbs.db
