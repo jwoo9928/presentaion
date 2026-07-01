@@ -1797,8 +1797,8 @@
             <div class="slide" id="s-attn" data-topic="1. 트랜스포머 · Self-Attention">
                 <div class="slide-title-wrapper">
                     <span class="slide-step">Part 1 · 트랜스포머란</span>
-                    <h2 class="slide-title">Self-Attention — 모든 단어가 서로를 본다</h2>
-                    <p class="slide-subtitle">RNN은 한 줄로 순서대로, 어텐션은 모든 단어를 한 번에 직접 연결합니다</p>
+                    <h2 class="slide-title">Self-Attention</h2>
+                    <p class="slide-subtitle">RNN은 한 줄로 순서대로, 어텐션은 모든 단어를 한 번에 직접 연결</p>
                 </div>
                 <div class="grid-2">
                     <div class="glass-card">
@@ -1872,7 +1872,7 @@
                                 <div class="word-node node-5" data-node="5" onclick="selectQueryNode(5)" onmouseover="selectQueryNode(5)">mat</div>
                             </div>
                         </div>
-                        <div class="cost-counter" id="costCounter">단어를 클릭하면 그 단어가 다른 단어에 주는 주목도(%)가 보입니다 · 선 굵기 = 주목도</div>
+                        <div class="cost-counter" id="costCounter">단어를 클릭하면 그 단어가 다른 단어에 주는 주목도(%)가 보임 · 선 굵기 = 주목도</div>
                     </div>
                 </div>
             </div>
@@ -1890,25 +1890,25 @@
             <div class="slide" id="s-decoder" data-topic="1. 트랜스포머 = 블록 반복 + 다음 단어 예측">
                 <div class="slide-title-wrapper">
                     <span class="slide-step">Part 1 · 트랜스포머란</span>
-                    <h2 class="slide-title">트랜스포머 = 블록을 쌓아 '다음 단어'를 예측한다</h2>
+                    <h2 class="slide-title">Transformer</h2>
                     <p class="slide-subtitle">방금 본 어텐션 + 작은 신경망(FFN)을 한 블록으로, 여러 층 쌓아 한 단어씩 생성</p>
                 </div>
                 <div class="grid-2">
                     <div class="glass-card">
                         <div class="card-header">
                             <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 9h16M4 14h16"/></svg></div>
-                            <h3 class="card-title">두 가지만 알면 됩니다</h3>
+                            <h3 class="card-title">핵심 2가지</h3>
                         </div>
                         <div class="card-body">
                             <div style="padding:16px 18px; background:rgba(245,78,0,0.06); border:1px solid var(--primary); border-radius:12px; margin-bottom:14px; font-size:16.5px; line-height:1.6;">
-                                <div class="bold" style="color:var(--primary); font-size:20px; margin-bottom:5px;">① 블록을 쌓는다</div>
-                                방금 본 <span class="bold">어텐션</span>과 정보를 한 번 더 가공하는 <span class="bold">작은 신경망(FFN)</span>이 한 '블록'입니다. GPT-3는 이런 똑같은 블록을 <span class="bold">96층</span> 쌓았습니다. 깊이 쌓을수록 더 복잡한 패턴을 학습합니다.
+                                <div class="bold" style="color:var(--primary); font-size:20px; margin-bottom:5px;">① 블록의 반복</div>
+                                방금 본 <span class="bold">어텐션</span>과 정보를 한 번 더 가공하는 <span class="bold">작은 신경망(FFN)</span>이 한 '블록'임. GPT-3는 이런 똑같은 블록을 <span class="bold">96층</span> 쌓았음. 깊이 쌓을수록 더 복잡한 패턴을 학습함.
                             </div>
                             <div style="padding:16px 18px; background:rgba(15,118,110,0.06); border:1px solid var(--secondary); border-radius:12px; font-size:16.5px; line-height:1.6;">
-                                <div class="bold" style="color:var(--secondary); font-size:20px; margin-bottom:5px;">② 다음 단어를 예측한다</div>
-                                현대 LLM(GPT·Qwen·Llama·Gemini)은 전부 <span class="bold">한 번에 한 단어씩</span> 예측합니다. 예측한 단어를 다시 입력에 붙여 그 다음을 예측 — 이렇게 반복(<span class="bold">자기회귀</span>)해서 문장을 만듭니다.
+                                <div class="bold" style="color:var(--secondary); font-size:20px; margin-bottom:5px;">② 단어 예측</div>
+                                현대 LLM(GPT·Qwen·Llama·Gemini)은 전부 <span class="bold">한 번에 한 단어씩</span> 예측함. 예측한 단어를 다시 입력에 붙여 그 다음을 예측 — 이렇게 반복(<span class="bold">자기회귀</span>)해서 문장을 만듦.
                             </div>
-                            <div class="mini-note" style="font-size:15px; margin-top:14px;">번역·요약·대화·코딩이 전부 '다음 단어 예측' 하나로 통일됩니다. 그런데 바로 이 <span class="bold">'한 단어씩 반복'</span>이 다음 파트의 문제(비용·메모리)를 만듭니다.</div>
+                            <div class="mini-note" style="font-size:15px; margin-top:14px;">번역·요약·대화·코딩이 전부 '다음 단어 예측' 하나로 통일됨.</div>
                         </div>
                     </div>
                     <div class="glass-card">
@@ -1972,26 +1972,23 @@
                                 <div class="kv-bar-fill" id="kvBarFill"></div>
                             </div>
                         </div>
-                        <div style="margin-top:15px; font-size:15px; color:var(--text-secondary); text-align:center;">
-                            ▶ 자동 생성 중 — 단어가 하나 생길 때마다 <span style="color:var(--primary-light); font-weight:600;">KV 캐시(메모리)</span>가 계속 쌓이는 걸 보세요. (반복 재생)
-                        </div>
                     </div>
                     <div class="glass-card">
                         <div class="card-header">
                             <div class="card-icon emerald">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
                             </div>
-                            <h3 class="card-title">어텐션 맵 성장 추이 ($O(L^2)$)</h3>
+                            <h3 class="card-title">비교 격자가 매 단어마다 커진다</h3>
                         </div>
                         <div class="card-body">
-                            <p style="font-size:16px;">새 단어를 만들 때마다 <span class="bold">이전 모든 단어</span>와 다시 연산합니다. 아래 격자가 매 스텝 커지는 게 그 비용입니다.</p>
+                            <p style="font-size:16px;">새 단어를 만들 때마다 <span class="bold">이전 모든 단어</span>와 다시 연산함.</p>
                             <div style="margin: 20px 0;">
                                 <div class="attn-grid-viz" id="attnGridViz">
                                     <!-- 6x6 grid cells -->
                                 </div>
                             </div>
                             <p style="font-size:15px;color:var(--accent);" id="autoregExpl">
-                                자동 생성이 시작됩니다…
+                                자동 생성이 시작됨…
                             </p>
                         </div>
                     </div>
@@ -2002,21 +1999,21 @@
             <div class="slide" id="s-complexity" data-topic="2. 트랜스포머의 한계 · O(L²)">
                 <div class="slide-title-wrapper">
                     <span class="slide-step">Part 2 · 트랜스포머의 한계</span>
-                    <h2 class="slide-title">길어질수록 비용이 폭발한다 — O(L²)</h2>
-                    <p class="slide-subtitle">단어가 늘수록 연결(연산)이 제곱으로 증가 — 그래서 '선형' 방식이 필요합니다</p>
+                    <h2 class="slide-title">Self-Attention의 근본 문제</h2>
+                    <p class="slide-subtitle">모든 단어가 서로를 보는 대가 — 단어가 늘수록 연결(연산)이 제곱으로 폭발</p>
                 </div>
                 <div class="grid-2">
                     <div class="glass-card">
                         <div class="card-header">
                             <div class="card-icon amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M3 17 C8 17 9 5 21 5"/></svg></div>
-                            <h3 class="card-title">왜 '선형' 방식이 필요한가</h3>
+                            <h3 class="card-title">어텐션의 비용 문제</h3>
                         </div>
                         <div class="card-body">
                             <ul style="font-size:16.5px; line-height:1.7;">
-                                <li><span class="bold">지금 방식(어텐션)</span>: 모든 단어 쌍을 비교 → 비용이 길이의 <span class="bold">제곱(L²)</span>. 길이 2배면 비용 4배, 10배면 100배.</li>
-                                <li><span class="bold">필요한 것</span>: 길이에 <span class="bold">비례(L)</span>만 하는 방식. 즉 길어져도 비용이 완만하게 늘어야 함.</li>
-                                <li><span class="bold">특히 심각한 곳</span>: 100만+ 단어 문서, 고해상도 이미지, 긴 영상·오디오처럼 입력이 클 때.</li>
-                                <li><span class="bold">결론</span>: "더 똑똑한 어텐션"이 아니라 <span class="bold">계산 방식 자체를 바꿔야</span> 합니다. 그 답이 <span class="bold">다음 장의 Mamba</span>입니다.</li>
+                                <li><span class="bold">원인</span> — 어텐션은 <span class="bold">모든 단어 쌍</span>을 비교함. 단어가 L개면 연결은 L×L, 즉 <span class="bold">길이의 제곱(L²)</span>.</li>
+                                <li><span class="bold">얼마나 심한가</span> — 길이 2배면 비용 <span class="bold">4배</span>, 10배면 <span class="bold">100배</span>. 앞 장의 KV 캐시(메모리)도 함께 늘어남.</li>
+                                <li><span class="bold">특히 치명적인 곳</span> — 100만+ 단어 문서, 고해상도 이미지, 긴 영상·오디오처럼 입력이 클 때.</li>
+                                <li><span class="bold">핵심</span> — 이건 어텐션이 <span class="bold">태생적으로 지닌 비용</span>임. 더 똑똑한 어텐션으로는 못 풂.</li>
                             </ul>
                         </div>
                     </div>
@@ -2040,7 +2037,7 @@
                                 <path d="M40 210 L340 150" fill="none" stroke="var(--primary)" stroke-width="3" stroke-dasharray="320" stroke-dashoffset="320">
                                     <animate attributeName="stroke-dashoffset" from="320" to="0" dur="1.6s" begin="0.4s" fill="freeze"/>
                                 </path>
-                                <text x="240" y="138" font-size="14" fill="var(--primary)" font-family="JetBrains Mono">O(L) 선형 방식 (Mamba)</text>
+                                <text x="248" y="138" font-size="14" fill="var(--primary)" font-family="JetBrains Mono">O(L) 선형 방식</text>
                             </svg>
                         </div>
                     </div>
@@ -2048,11 +2045,11 @@
             </div>
 
             <!-- [SLIDE 6: RNN & SSM] -->
-            <div class="slide" id="s-ssm" data-topic="3. 또 다른 방법 — 메모리 하나로 읽기">
+            <div class="slide" id="s-ssm" data-topic="3. SSM — 선형 시퀀스 모델">
                 <div class="slide-title-wrapper">
-                    <span class="slide-step">Part 3 · Mamba · 대안의 직관</span>
-                    <h2 class="slide-title">또 다른 방법: 메모리 하나만 들고 순서대로 읽기</h2>
-                    <p class="slide-subtitle">어텐션처럼 매번 전체를 다시 보지 않고, 요약 메모리 하나를 갱신하며 전진합니다</p>
+                    <span class="slide-step">Part 3 · SSM 소개</span>
+                    <h2 class="slide-title">SSM — 메모리 하나로 처리하는 선형 방식</h2>
+                    <p class="slide-subtitle">State Space Model — 어텐션과 정반대로, 순서대로 읽으며 '요약 메모리' 하나만 갱신</p>
                 </div>
                 <div class="grid-2">
                     <div class="glass-card">
@@ -2060,17 +2057,16 @@
                             <div class="card-icon amber">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 2h14M5 22h14M19 2l-7 7-7-7M5 22l7-7 7 7"/></svg>
                             </div>
-                            <h3 class="card-title">핵심 아이디어</h3>
+                            <h3 class="card-title">SSM이란</h3>
                         </div>
                         <div class="card-body">
                             <div style="padding:14px 16px; background:rgba(180,83,9,0.06); border:1px solid var(--accent); border-radius:12px; font-size:16.5px; line-height:1.65; margin-bottom:12px;">
-                                어텐션은 새 단어마다 <span class="bold">이전 전부</span>를 다시 봤습니다. 반대로 — <span class="bold">지금까지의 요약을 담은 '메모리' 하나</span>만 들고, 단어를 하나씩 읽으며 그 메모리를 갱신하면 어떨까요? 이게 <span class="bold">RNN·SSM</span>의 방식입니다.
+                                <span class="bold">SSM(상태공간모델)</span>은 단어를 <span class="bold">순서대로</span> 읽으며, 지금까지의 내용을 <span class="bold">'메모리(상태)' 하나에 요약</span>해 계속 갱신하는 방식임. 어텐션이 매번 전체를 다시 보는 것과 정반대죠. (RNN도 같은 계열)
                             </div>
                             <ul style="font-size:16px; line-height:1.7;">
-                                <li><span class="bold" style="color:var(--secondary);">장점</span> — 메모리 크기가 <span class="bold">고정</span>이라, 문장이 길어져도 비용이 일정합니다. 앞서 본 <span class="bold">KV 캐시 폭발이 없습니다.</span></li>
-                                <li><span class="bold" style="color:var(--danger);">한계</span> — 모든 단어를 <span class="bold">똑같은 규칙</span>으로 처리합니다. 'the'든 'cat'이든 구분 없이요. 그래서 <span class="bold">'중요한 걸 골라 기억'을 못 합니다.</span></li>
+                                <li><span class="bold" style="color:var(--secondary);">장점</span> — 메모리 크기가 <span class="bold">고정</span>이라 문장이 길어져도 비용이 <span class="bold">일정(선형)</span>. 어텐션의 KV 캐시 폭발이 없음.</li>
+                                <li><span class="bold" style="color:var(--danger);">한계</span> — 모든 단어를 <span class="bold">똑같은 규칙</span>으로 처리함('the'든 'cat'이든). 그래서 <span class="bold">'중요한 걸 골라 기억'을 못 함.</span></li>
                             </ul>
-                            <div class="mini-note" style="font-size:15px;">바로 이 한계를 푸는 게 <span class="bold">다음 장의 Mamba</span>입니다.</div>
                         </div>
                     </div>
                     <div class="glass-card">
@@ -2093,8 +2089,7 @@
                                     <span style="font-size: 12px; margin-top:5px; color: var(--secondary);" id="rnnValue">(비어 있음)</span>
                                 </div>
                             </div>
-                            <div class="rnn-status-text" id="rnnStatus" style="font-size:15px;">단어를 읽을 때마다 메모리에 요약을 누적합니다</div>
-                            <div style="font-size:14px; color:var(--text-secondary); margin-top:8px;">▶ 자동 재생 — The→cat→sat가 <span class="bold">메모리 하나</span>로 순차 압축</div>
+                            <div class="rnn-status-text" id="rnnStatus" style="font-size:15px;">단어를 읽을 때마다 메모리에 요약을 누적함</div>
                         </div>
                     </div>
                 </div>
@@ -2105,8 +2100,8 @@
             <div class="slide" id="s-gate" data-topic="6. Mamba의 선택 메커니즘">
                 <div class="slide-title-wrapper">
                     <span class="slide-step">Part 3 · ★ Mamba 소개</span>
-                    <h2 class="slide-title">Mamba-1 등장: 선택적 상태공간 모델(Selective SSM)</h2>
-                    <p class="slide-subtitle">한 줄 핵심 — 입력 내용에 따라 "무엇을 기억/망각할지" 스스로 정하는 가변 게이트</p>
+                    <h2 class="slide-title">Mamba-1: 선택적 상태공간 모델(Selective SSM)</h2>
+                    <p class="slide-subtitle">입력 내용에 따라 "무엇을 기억/망각할지" 스스로 정하는 가변 게이트</p>
                 </div>
                 <div class="grid-2">
                     <div class="glass-card">
@@ -2118,13 +2113,13 @@
                         </div>
                         <div class="card-body">
                             <div style="padding:10px 14px; background:rgba(245,78,0,0.07); border:1px solid var(--primary); border-radius:10px; font-size:14px; margin-bottom:12px;">
-                                <span class="bold" style="color:var(--primary);">고전 SSM</span>은 모든 단어를 <span class="bold">똑같은 규칙</span>으로 처리했습니다. <span class="bold" style="color:var(--primary);">Mamba</span>는 <span class="bold">"지금 이 단어가 중요한가?"를 보고 규칙(게이트)을 매 순간 바꿉니다.</span>
+                                <span class="bold" style="color:var(--primary);">고전 SSM</span>은 모든 단어를 <span class="bold">똑같은 규칙</span>으로 처리했음. <span class="bold" style="color:var(--primary);">Mamba</span>는 <span class="bold">"지금 이 단어가 중요한가?"를 보고 규칙(게이트)을 매 순간 바꿈.</span>
                             </div>
                             <ul>
                                 <li><span class="bold">중요한 단어</span>("cat", "sat") → 게이트를 <span class="bold">활짝 열어</span> 메모리에 강하게 기록.</li>
                                 <li><span class="bold">안 중요한 단어</span>("the", "on") → 게이트를 <span class="bold">닫아</span> 그냥 흘려보내고 기존 메모리 유지.</li>
-                                <li>즉, <span class="bold">내용에 따라 "무엇을 기억하고 무엇을 버릴지" 스스로 선택</span> — 고전 SSM이 못 하던 바로 그 일입니다.</li>
-                                <li><span class="bold">대가</span>: 규칙이 매번 바뀌니 '한 번에 병렬 계산'(앞 장의 ② 방식)을 못 씁니다 → 다음 장의 하드웨어 기법으로 해결.</li>
+                                <li>즉, <span class="bold">내용에 따라 "무엇을 기억하고 무엇을 버릴지" 스스로 선택</span> — 고전 SSM이 못 하던 바로 그 일임.</li>
+                                <li><span class="bold">대가</span>: 규칙이 매번 바뀌니 계산이 까다로워짐. 이건 GPU 메모리를 영리하게 쓰는 방식으로 해결함.</li>
                             </ul>
                         </div>
                     </div>
@@ -2145,7 +2140,7 @@
                             <div style="display:flex; align-items:center; gap: 40px; margin-bottom: 25px;">
                                 <div class="gate-sensor" id="gateSensor">GATING<br>OFF</div>
                                 <div style="font-size: 16px; color: var(--text-secondary); max-width: 250px;">
-                                    게이트가 반응해 <span class="bold">중요한 단어만</span> 아래 메모리에 기록됩니다.
+                                    게이트가 반응해 <span class="bold">중요한 단어만</span> 아래 메모리에 기록됨.
                                 </div>
                             </div>
                             <div class="mamba-memory-panel">
@@ -2154,7 +2149,6 @@
                                 <div class="mem-slot" id="mem2">Empty</div>
                                 <div class="mem-slot" id="mem3">Empty</div>
                             </div>
-                            <div style="margin-top:18px; font-size:13px; color:var(--text-secondary);">▶ 자동 재생 — 중요 단어(cat·sat)만 게이트를 통과해 메모리에 기입</div>
                         </div>
                     </div>
                 </div>
@@ -2164,127 +2158,118 @@
             <div class="slide" id="s-mambablock" data-topic="6. Mamba 블록 해부">
                 <div class="slide-title-wrapper">
                     <span class="slide-step">Part 3 · Mamba 설명 · 블록</span>
-                    <h2 class="slide-title">Mamba 블록 해부 — 전체 데이터 흐름</h2>
-                    <p class="slide-subtitle">입력 투영 → Conv1D → 선택적 SSM(Δ,B,C는 입력의 함수) → SiLU 게이트 → 출력 투영</p>
+                    <h2 class="slide-title">Mamba 블록 — 처리 프로세스</h2>
+                    <p class="slide-subtitle">입력을 두 갈래로 — 위는 '기억 경로', 아래는 '게이트(수도꼭지)' — 둘을 곱해 출력</p>
                 </div>
                 <div class="glass-card" style="flex:1; display:flex; flex-direction:column;">
                     <div class="figure-box" style="flex:1;">
-                        <svg viewBox="0 0 1000 360" style="width:100%; height:100%;" font-family="JetBrains Mono">
+                        <svg viewBox="0 0 1000 360" style="width:100%; height:100%;" font-family="'Noto Sans KR', sans-serif">
                             <defs>
                                 <marker id="mb-arr" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="var(--text-secondary)"/></marker>
                             </defs>
                             <!-- 입력 -->
-                            <rect x="20" y="150" width="90" height="50" rx="8" fill="var(--bg-block-layer)" stroke="var(--border)"/>
-                            <text x="65" y="172" text-anchor="middle" font-size="13" fill="var(--text-primary)">입력 x</text>
-                            <text x="65" y="190" text-anchor="middle" font-size="12" fill="var(--text-secondary)">x₁…x_L</text>
-                            <!-- 입력 선형투영 (split) -->
-                            <rect x="150" y="150" width="100" height="50" rx="8" fill="none" stroke="var(--primary)" stroke-width="2"/>
-                            <text x="200" y="172" text-anchor="middle" font-size="12" fill="var(--primary)">Linear Proj</text>
-                            <text x="200" y="189" text-anchor="middle" font-size="11" fill="var(--text-secondary)">확장 E=2</text>
-                            <path d="M110 175 H150" stroke="var(--text-secondary)" stroke-width="2" marker-end="url(#mb-arr)"/>
+                            <rect x="20" y="150" width="96" height="50" rx="8" fill="var(--bg-block-layer)" stroke="var(--border)"/>
+                            <text x="68" y="180" text-anchor="middle" font-size="15" fill="var(--text-primary)">입력 문장</text>
+                            <!-- 두 갈래로 나눔 -->
+                            <rect x="150" y="150" width="104" height="50" rx="8" fill="none" stroke="var(--text-secondary)" stroke-width="1.6"/>
+                            <text x="202" y="172" text-anchor="middle" font-size="14" fill="var(--text-primary)">두 갈래로</text>
+                            <text x="202" y="190" text-anchor="middle" font-size="12" fill="var(--text-secondary)">나눔</text>
+                            <path d="M116 175 H150" stroke="var(--text-secondary)" stroke-width="2" marker-end="url(#mb-arr)"/>
 
-                            <!-- 주 경로 (위) -->
-                            <path d="M250 165 C285 165 285 90 320 90" fill="none" stroke="var(--primary)" stroke-width="2" marker-end="url(#mb-arr)"/>
-                            <rect x="320" y="65" width="110" height="50" rx="8" fill="none" stroke="var(--border)"/>
-                            <text x="375" y="86" text-anchor="middle" font-size="12" fill="var(--text-primary)">Conv1D</text>
-                            <text x="375" y="103" text-anchor="middle" font-size="11" fill="var(--text-secondary)">짧은 depthwise</text>
+                            <!-- 주 경로 (위): 기억 경로 -->
+                            <text x="330" y="42" text-anchor="middle" font-size="13" fill="var(--primary)" font-weight="700">▲ 기억 경로</text>
+                            <path d="M254 165 C288 165 288 92 322 92" fill="none" stroke="var(--primary)" stroke-width="2" marker-end="url(#mb-arr)"/>
+                            <rect x="322" y="65" width="118" height="52" rx="8" fill="none" stroke="var(--border)"/>
+                            <text x="381" y="88" text-anchor="middle" font-size="14" fill="var(--text-primary)">이웃 단어</text>
+                            <text x="381" y="106" text-anchor="middle" font-size="14" fill="var(--text-primary)">묶어보기</text>
 
-                            <rect x="460" y="65" width="120" height="50" rx="8" fill="none" stroke="var(--accent)" stroke-width="1.6"/>
-                            <text x="520" y="84" text-anchor="middle" font-size="11" fill="var(--accent)">SiLU 활성</text>
-                            <text x="520" y="101" text-anchor="middle" font-size="11" fill="var(--text-secondary)">→ Δ,B,C 생성</text>
-                            <path d="M430 90 H460" stroke="var(--text-secondary)" stroke-width="2" marker-end="url(#mb-arr)"/>
+                            <rect x="460" y="65" width="118" height="52" rx="8" fill="none" stroke="var(--accent)" stroke-width="1.6"/>
+                            <text x="519" y="88" text-anchor="middle" font-size="14" fill="var(--accent)">규칙 만들기</text>
+                            <text x="519" y="106" text-anchor="middle" font-size="12" fill="var(--text-secondary)">(입력마다 다름)</text>
+                            <path d="M440 91 H460" stroke="var(--text-secondary)" stroke-width="2" marker-end="url(#mb-arr)"/>
 
                             <!-- 선택적 SSM 핵심 -->
-                            <rect x="610" y="55" width="160" height="80" rx="10" fill="rgba(245,78,0,0.10)" stroke="var(--primary)" stroke-width="2.5"/>
-                            <text x="690" y="80" text-anchor="middle" font-size="13" fill="var(--primary)" font-weight="700">Selective SSM</text>
-                            <text x="690" y="100" text-anchor="middle" font-size="11.5" fill="var(--text-secondary)">규칙이 입력마다 바뀜</text>
-                            <text x="690" y="116" text-anchor="middle" font-size="11.5" fill="var(--text-secondary)">메모리를 한 칸씩 갱신</text>
-                            <text x="690" y="130" text-anchor="middle" font-size="10.5" fill="var(--primary)">★ 내용 기반 선택 — 핵심</text>
-                            <path d="M580 90 H610" stroke="var(--text-secondary)" stroke-width="2" marker-end="url(#mb-arr)"/>
+                            <rect x="600" y="52" width="180" height="84" rx="10" fill="rgba(245,78,0,0.10)" stroke="var(--primary)" stroke-width="2.5"/>
+                            <text x="690" y="80" text-anchor="middle" font-size="15" fill="var(--primary)" font-weight="700">선택적 기억</text>
+                            <text x="690" y="101" text-anchor="middle" font-size="12.5" fill="var(--text-secondary)">중요한 단어만 골라 저장</text>
+                            <text x="690" y="122" text-anchor="middle" font-size="12" fill="var(--primary)">★ Mamba의 핵심</text>
+                            <path d="M578 91 H600" stroke="var(--text-secondary)" stroke-width="2" marker-end="url(#mb-arr)"/>
 
                             <!-- 게이트 경로 (아래) -->
-                            <path d="M250 185 C285 185 285 270 320 270" fill="none" stroke="var(--secondary)" stroke-width="2" marker-end="url(#mb-arr)"/>
-                            <rect x="320" y="245" width="120" height="50" rx="8" fill="none" stroke="var(--secondary)" stroke-width="1.6"/>
-                            <text x="380" y="266" text-anchor="middle" font-size="12" fill="var(--secondary)">게이트 z</text>
-                            <text x="380" y="283" text-anchor="middle" font-size="11" fill="var(--text-secondary)">SiLU(z)</text>
+                            <text x="360" y="238" text-anchor="middle" font-size="13" fill="var(--secondary)" font-weight="700">▼ 수도꼭지 경로</text>
+                            <path d="M254 185 C288 185 288 270 322 270" fill="none" stroke="var(--secondary)" stroke-width="2" marker-end="url(#mb-arr)"/>
+                            <rect x="322" y="248" width="130" height="50" rx="8" fill="none" stroke="var(--secondary)" stroke-width="1.6"/>
+                            <text x="387" y="271" text-anchor="middle" font-size="14" fill="var(--secondary)">게이트</text>
+                            <text x="387" y="289" text-anchor="middle" font-size="12" fill="var(--text-secondary)">(수도꼭지)</text>
 
-                            <!-- 원소곱 -->
-                            <circle cx="700" cy="200" r="22" fill="none" stroke="var(--accent)" stroke-width="2.5"/>
-                            <text x="700" y="207" text-anchor="middle" font-size="20" fill="var(--accent)">⊙</text>
-                            <path d="M690 135 C690 160 695 170 698 178" fill="none" stroke="var(--primary)" stroke-width="2" marker-end="url(#mb-arr)"/>
-                            <path d="M440 270 C560 270 640 235 685 215" fill="none" stroke="var(--secondary)" stroke-width="2" marker-end="url(#mb-arr)"/>
-                            <text x="640" y="255" font-size="11" fill="var(--secondary)">게이트 변조</text>
+                            <!-- 곱하기 -->
+                            <circle cx="700" cy="205" r="24" fill="none" stroke="var(--accent)" stroke-width="2.5"/>
+                            <text x="700" y="212" text-anchor="middle" font-size="22" fill="var(--accent)">×</text>
+                            <text x="700" y="248" text-anchor="middle" font-size="12" fill="var(--accent)">곱하기</text>
+                            <path d="M690 136 C690 162 696 172 700 181" fill="none" stroke="var(--primary)" stroke-width="2" marker-end="url(#mb-arr)"/>
+                            <path d="M452 273 C560 273 640 235 682 218" fill="none" stroke="var(--secondary)" stroke-width="2" marker-end="url(#mb-arr)"/>
 
-                            <!-- 출력 투영 + residual -->
-                            <rect x="800" y="175" width="110" height="50" rx="8" fill="none" stroke="var(--primary)" stroke-width="2"/>
-                            <text x="855" y="196" text-anchor="middle" font-size="12" fill="var(--primary)">Out Proj</text>
-                            <text x="855" y="213" text-anchor="middle" font-size="11" fill="var(--text-secondary)">+ Residual/Norm</text>
-                            <path d="M722 200 H800" stroke="var(--text-secondary)" stroke-width="2" marker-end="url(#mb-arr)"/>
-                            <rect x="930" y="175" width="50" height="50" rx="8" fill="var(--bg-block-layer)" stroke="var(--border)"/>
-                            <text x="955" y="204" text-anchor="middle" font-size="13" fill="var(--text-primary)">y</text>
-                            <path d="M910 200 H930" stroke="var(--text-secondary)" stroke-width="2" marker-end="url(#mb-arr)"/>
+                            <!-- 출력 -->
+                            <rect x="810" y="180" width="100" height="50" rx="8" fill="var(--bg-block-layer)" stroke="var(--border)"/>
+                            <text x="860" y="210" text-anchor="middle" font-size="15" fill="var(--text-primary)">출력</text>
+                            <path d="M724 205 H810" stroke="var(--text-secondary)" stroke-width="2" marker-end="url(#mb-arr)"/>
 
-                            <text x="500" y="345" text-anchor="middle" font-size="13" fill="var(--text-secondary)">Mamba 블록 = (Conv→Selective SSM) 주 경로 × SiLU 게이트 경로 — Transformer의 MHA+FFN을 단일 동질 블록으로 통합</text>
+                            <text x="500" y="345" text-anchor="middle" font-size="14" fill="var(--text-secondary)">핵심: '중요한 단어만 골라 기억'(위) 과 '게이트'(아래)를 곱해 하나로 — 트랜스포머의 어텐션+FFN을 한 블록으로 합친 것</text>
                         </svg>
-                    </div>
-                    <div class="mini-note" style="text-align:center; margin-top:4px; font-size:11px;">
-                        핵심 차별점: 기존 SSM은 $B,C,\Delta$가 <span class="bold">고정(LTI)</span> → Mamba는 이들을 <span class="bold">입력 $x_t$의 함수</span>로 만들어 "무엇을 기억/망각할지" 내용 기반 선택. 그 대가로 합성곱이 불가 → Hardware-Aware selective scan으로 해결(다음 슬라이드).
                     </div>
                 </div>
             </div>
 
             <!-- [S19: Hardware-Aware] -->
-            <div class="slide" id="s-hardware" data-topic="6. Hardware-Aware 알고리즘">
+            <div class="slide" id="s-hardware" data-topic="3. Mamba를 빠르게 돌리는 비결">
                 <div class="slide-title-wrapper">
                     <span class="slide-step">Part 3 · Mamba 설명 · 구현</span>
-                    <h2 class="slide-title">Hardware-Aware Selective Scan</h2>
-                    <p class="slide-subtitle">선택성 때문에 합성곱이 불가 → GPU 메모리 계층을 의식한 fused kernel로 극복</p>
+                    <h2 class="slide-title">Mamba — 메모리 최적화</h2>
+                    <p class="slide-subtitle">규칙이 매번 바뀌어 계산이 까다롭지만, GPU의 '빠른 메모리'를 영리하게 써서 극복</p>
                 </div>
                 <div class="grid-2">
                     <div class="glass-card">
                         <div class="card-header">
                             <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg></div>
-                            <h3 class="card-title">세 가지 핵심 기법</h3>
+                            <h3 class="card-title">핵심 아이디어</h3>
                         </div>
                         <div class="card-body">
-                            <ul>
-                                <li><span class="bold">Kernel Fusion</span>: 상태 $h$ 전체를 느린 HBM에 물질화하지 않음. 파라미터를 SRAM으로 올려 그 안에서 이산화+scan을 끝내고 <span class="bold">출력만</span> HBM에 기록.</li>
-                                <li><span class="bold">Parallel Scan</span>: 순차 점화식을 결합법칙을 이용한 병렬 prefix-scan으로 변환 → GPU 병렬성 활용.</li>
-                                <li><span class="bold">Recomputation</span>: 역전파 시 거대한 중간 상태를 저장하지 않고 재계산 → 메모리 절감.</li>
+                            <div style="padding:12px 14px; background:rgba(245,78,0,0.06); border:1px solid var(--primary); border-radius:10px; font-size:16px; line-height:1.6; margin-bottom:12px;">
+                                GPU에는 <span class="bold">느리지만 큰 메모리</span>와 <span class="bold">빠르지만 작은 메모리</span>가 있음. Mamba는 계산을 <span class="bold">빠른 메모리 안에서 다 끝내고 결과만</span> 큰 메모리로 내보냄. 느린 메모리를 왔다 갔다 하는 시간을 없애는 거죠.
+                            </div>
+                            <ul style="font-size:15.5px; line-height:1.65;">
+                                <li>중간 계산을 <span class="bold">저장하지 않고 필요할 때 다시 계산</span>해 메모리를 아낌.</li>
+                                <li>순서대로 하던 계산을 <span class="bold">병렬로 재조직</span>해 GPU를 꽉 씀.</li>
                             </ul>
-                            <div class="mini-note">결과(원논문, A100): <span class="bold">선택적 스캔 커널이 표준(naive) 구현 대비 ~40× 빠름</span>, <span class="bold">생성 추론 처리량은 Transformer 대비 ~5×</span>. FlashAttention과 유사한 메모리 프로파일.</div>
+                            <div class="mini-note" style="font-size:14.5px;">결과(원논문 기준): 이 방식으로 핵심 계산이 <span class="bold">일반 구현보다 약 40배 빠르고</span>, 글 생성 속도는 <span class="bold">트랜스포머 대비 약 5배</span>임.</div>
                         </div>
                     </div>
                     <div class="glass-card">
                         <div class="card-header">
                             <div class="card-icon emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="6" rx="1"/><rect x="3" y="15" width="18" height="6" rx="1"/><path d="M12 9v6"/></svg></div>
-                            <h3 class="card-title">HBM ↔ SRAM 메모리 계층</h3>
+                            <h3 class="card-title">느린 메모리 ↔ 빠른 메모리</h3>
                         </div>
                         <div class="figure-box">
-                            <svg viewBox="0 0 380 250" style="width:100%" font-family="JetBrains Mono">
-                                <!-- HBM -->
-                                <rect x="30" y="30" width="320" height="55" rx="8" fill="var(--bg-canvas)" stroke="var(--border)"/>
-                                <text x="190" y="55" text-anchor="middle" font-size="13" fill="var(--text-primary)">HBM (느림 · 대용량)</text>
-                                <text x="190" y="73" text-anchor="middle" font-size="11" fill="var(--text-secondary)">입력 x, 파라미터 Δ/A/B/C, 출력 y</text>
-                                <!-- SRAM -->
-                                <rect x="90" y="140" width="200" height="70" rx="8" fill="rgba(245,78,0,0.08)" stroke="var(--primary)" stroke-width="2"/>
-                                <text x="190" y="165" text-anchor="middle" font-size="13" fill="var(--primary)">SRAM (빠름 · 소용량)</text>
-                                <text x="190" y="183" text-anchor="middle" font-size="11" fill="var(--text-secondary)">이산화 + selective scan</text>
-                                <text x="190" y="198" text-anchor="middle" font-size="11" fill="var(--primary)">상태 h는 여기서만 존재</text>
-                                <!-- arrows -->
-                                <path d="M150 85 V140" stroke="var(--secondary)" stroke-width="2.5" marker-end="url(#arr2)">
+                            <svg viewBox="0 0 380 250" style="width:100%" font-family="'Noto Sans KR', sans-serif">
+                                <rect x="30" y="30" width="320" height="56" rx="8" fill="var(--bg-canvas)" stroke="var(--border)"/>
+                                <text x="190" y="55" text-anchor="middle" font-size="15" fill="var(--text-primary)">느린 큰 메모리</text>
+                                <text x="190" y="74" text-anchor="middle" font-size="12" fill="var(--text-secondary)">입력과 최종 결과가 여기 있음</text>
+                                <rect x="80" y="140" width="220" height="72" rx="8" fill="rgba(245,78,0,0.08)" stroke="var(--primary)" stroke-width="2"/>
+                                <text x="190" y="168" text-anchor="middle" font-size="15" fill="var(--primary)">빠른 작은 메모리</text>
+                                <text x="190" y="189" text-anchor="middle" font-size="12" fill="var(--text-secondary)">모든 계산을 여기서 끝냄</text>
+                                <path d="M150 86 V140" stroke="var(--secondary)" stroke-width="2.5" marker-end="url(#arr2)">
                                     <animate attributeName="stroke-dasharray" values="0 60;60 0" dur="1.4s" repeatCount="8" fill="freeze"/>
                                 </path>
-                                <text x="120" y="118" font-size="11" fill="var(--secondary)">로드 ↓</text>
-                                <path d="M230 140 V85" stroke="var(--primary)" stroke-width="2.5" marker-end="url(#arr3)">
+                                <text x="112" y="118" font-size="12" fill="var(--secondary)">가져옴</text>
+                                <path d="M230 140 V86" stroke="var(--primary)" stroke-width="2.5" marker-end="url(#arr3)">
                                     <animate attributeName="stroke-dasharray" values="0 60;60 0" dur="1.4s" begin="0.7s" repeatCount="8" fill="freeze"/>
                                 </path>
-                                <text x="245" y="118" font-size="11" fill="var(--primary)">출력만 ↑</text>
+                                <text x="250" y="118" font-size="12" fill="var(--primary)">결과만</text>
                                 <defs>
                                     <marker id="arr2" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="var(--secondary)"/></marker>
                                     <marker id="arr3" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="var(--primary)"/></marker>
                                 </defs>
-                                <text x="190" y="238" text-anchor="middle" font-size="11" fill="var(--text-secondary)">느린 HBM 왕복을 최소화 — 메모리 대역폭이 진짜 병목</text>
+                                <text x="190" y="238" text-anchor="middle" font-size="12.5" fill="var(--text-secondary)">느린 메모리를 왔다 갔다 하는 시간을 최소화</text>
                             </svg>
                         </div>
                     </div>
@@ -2295,14 +2280,14 @@
             <div class="slide" id="s-bench" data-topic="6. Mamba vs Transformer 벤치마크">
                 <div class="slide-title-wrapper">
                     <span class="slide-step">Part 3 · Transformer와 비교</span>
-                    <h2 class="slide-title">Mamba vs Transformer — 성능·효율 벤치마크</h2>
-                    <p class="slide-subtitle">동일 논문 내부 비교 수치만 사용 (Pile zero-shot 평균 등)</p>
+                    <h2 class="slide-title">성능 비교</h2>
+                    <p class="slide-subtitle">같은 크기에서 Mamba가 트랜스포머를 능가, 긴 글에서도 메모리가 늘지 않음</p>
                 </div>
                 <div class="grid-2">
                     <div class="glass-card">
                         <div class="card-header">
                             <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
-                            <h3 class="card-title">언어 zero-shot 평균 (높을수록 좋음)</h3>
+                            <h3 class="card-title">언어 성능 점수</h3>
                         </div>
                         <div class="card-body" style="padding-top:6px;">
                             <div class="bench-row"><div class="bench-label"><span>Pythia-1.4B</span><span>51.7</span></div><div class="bench-track"><div class="bench-fill tf" data-w="15"></div></div></div>
@@ -2336,7 +2321,7 @@
                             <ul style="margin-top:10px; font-size:13px;">
                                 <li><span class="bold">추론 메모리</span>: Transformer는 토큰마다 K/V 누적 → 선형 증가. Mamba는 고정 크기 상태만 유지 → 상수.</li>
                                 <li><span class="bold">속도</span>(원논문): 생성 추론 처리량 Transformer 대비 <span class="bold">~5×</span>, 학습 커널은 naive scan 대비 <span class="bold">~40×</span> — 서로 기준이 다른 별개 지표.</li>
-                                <li><span class="bold">한계</span>: 직접적 content retrieval(연상 회상)은 순수 Mamba가 약함 → 하이브리드로 보완.</li>
+                                <li><span class="bold">한계</span>: 특정 단어를 콕 집어 다시 찾아오는 능력은 순수 Mamba가 약함.</li>
                             </ul>
                         </div>
                     </div>
@@ -2346,9 +2331,9 @@
             <!-- [SLIDE 8: MAMBA-2 & SSD] -->
             <div class="slide" id="s-ssd" data-topic="7. Mamba-2 & SSD">
                 <div class="slide-title-wrapper">
-                    <span class="slide-step">Part 3 · Mamba-2</span>
-                    <h2 class="slide-title">Mamba-2: "SSM과 어텐션은 사실 쌍둥이였다"</h2>
-                    <p class="slide-subtitle">State Space Duality — 순차 메모리 갱신과 전체 비교가 '같은 계산의 두 방법'임을 증명</p>
+                    <span class="slide-step">Part 3 · 둘의 공통점</span>
+                    <h2 class="slide-title">Mamba의 약점, 그리고 하이브리드</h2>
+                    <p class="slide-subtitle">정확히 찾아오기가 약한 것이 Mamba의 단점 — 어텐션을 소수 섞어 보완</p>
                 </div>
                 <div class="grid-2">
                     <div class="glass-card">
@@ -2356,14 +2341,13 @@
                             <div class="card-icon">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 10.5C5 7.5 7.5 5 10.5 4.5M19.5 13.5c-.5 3-3 5.5-6 6M4.5 19.5l15-15M8.5 15.5l7-7"/></svg>
                             </div>
-                            <h3 class="card-title">핵심 발견 — 두 길, 같은 도착지</h3>
+                            <h3 class="card-title">단점 → 해법</h3>
                         </div>
                         <div class="card-body">
-                            <p>Mamba-2의 핵심은 이론적 통찰입니다: <span class="bold">"한 칸씩 메모리를 갱신하는 SSM"</span>과 <span class="bold">"모든 토큰을 한 번에 비교하는 어텐션"</span>이 사실은 <span class="bold">똑같은 계산을 다른 순서로 한 것</span>일 뿐입니다.</p>
-                            <ul style="margin-top:12px;">
-                                <li><span class="bold">그래서 무엇이 좋아지나</span>: 둘의 장점을 골라 쓸 수 있습니다. <span class="bold">짧은 구간은 어텐션식</span>(GPU가 행렬곱으로 초고속), <span class="bold">구간과 구간 사이는 SSM식</span>(메모리 적게).</li>
-                                <li><span class="bold">더 단순·더 빠름</span>: Mamba-1의 복잡한 스캔 커널 대신 GPU 친화적인 행렬곱 위주로 → 구현이 단순하고 중간 길이에서 더 빠름.</li>
-                                <li><span class="bold">약점 보완</span>: 순수 SSM의 약점이던 '정확한 회상(retrieval)'도 어텐션식 계산을 섞어 개선.</li>
+                            <ul style="font-size:16px; line-height:1.7;">
+                                <li><span class="bold" style="color:var(--danger);">단점</span> — Mamba는 메모리에 요약만 하므로, 특정 단어를 콕 집어 다시 찾아오는 능력이 약함.</li>
+                                <li><span class="bold" style="color:var(--primary);">해법</span> — 어텐션 층을 소수 섞음(하이브리드).</li>
+                                <li><span class="bold">섞을 수 있는 이유</span> — SSM과 어텐션은 결국 <span class="bold">"어떤 단어에 얼마나 주목할지"를 계산하는 같은 일</span>. 방법만 다를 뿐(어텐션=한 번에, SSM=순서대로 요약)이라, 한 모델에 섞어도 자연스럽게 이어짐.</li>
                             </ul>
                         </div>
                     </div>
@@ -2372,28 +2356,19 @@
                             <div class="card-icon emerald">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><line x1="9" y1="4" x2="9" y2="20"/><line x1="15" y1="4" x2="15" y2="20"/><path d="M4 8h16M4 16h16"/></svg>
                             </div>
-                            <h3 class="card-title">"두 길 = 같은 출력" + 블록 분해</h3>
+                            <h3 class="card-title">두 방법, 같은 결과</h3>
                         </div>
-                        <div class="dual-equation-box" style="gap:10px;">
-                            <div class="figure-box" style="min-height:0; padding:12px; width:100%;">
-                                <svg viewBox="0 0 380 130" style="width:100%" font-family="JetBrains Mono">
-                                    <rect x="14" y="18" width="150" height="38" rx="8" fill="none" stroke="var(--primary)" stroke-width="2"/><text x="89" y="36" text-anchor="middle" font-size="13" fill="var(--primary)">순차 SSM 방식</text><text x="89" y="50" text-anchor="middle" font-size="10" fill="var(--text-secondary)">한 칸씩 · 메모리 적게</text>
-                                    <rect x="14" y="74" width="150" height="38" rx="8" fill="none" stroke="var(--secondary)" stroke-width="2"/><text x="89" y="92" text-anchor="middle" font-size="13" fill="var(--secondary)">어텐션 행렬 방식</text><text x="89" y="106" text-anchor="middle" font-size="10" fill="var(--text-secondary)">한 번에 · GPU 빠름</text>
-                                    <path d="M164 37 C220 37 230 60 250 65" fill="none" stroke="var(--primary)" stroke-width="2" marker-end="url(#arr)"/>
-                                    <path d="M164 93 C220 93 230 70 250 65" fill="none" stroke="var(--secondary)" stroke-width="2" marker-end="url(#arr)"/>
-                                    <rect x="252" y="46" width="114" height="40" rx="8" fill="rgba(245,78,0,0.08)" stroke="var(--accent)" stroke-width="2"/><text x="309" y="64" text-anchor="middle" font-size="13" fill="var(--accent)" font-weight="700">동일한 출력 Y</text><text x="309" y="79" text-anchor="middle" font-size="10" fill="var(--text-secondary)">수학적으로 같음</text>
+                        <div class="dual-equation-box" style="gap:14px; justify-content:center;">
+                            <div class="figure-box" style="min-height:0; padding:16px; width:100%;">
+                                <svg viewBox="0 0 380 150" style="width:100%" font-family="'Noto Sans KR', sans-serif">
+                                    <rect x="10" y="24" width="160" height="44" rx="8" fill="none" stroke="var(--primary)" stroke-width="2"/><text x="90" y="44" text-anchor="middle" font-size="15" fill="var(--primary)">SSM 방식</text><text x="90" y="61" text-anchor="middle" font-size="12" fill="var(--text-secondary)">순서대로 · 메모리 적게</text>
+                                    <rect x="10" y="86" width="160" height="44" rx="8" fill="none" stroke="var(--secondary)" stroke-width="2"/><text x="90" y="106" text-anchor="middle" font-size="15" fill="var(--secondary)">어텐션 방식</text><text x="90" y="123" text-anchor="middle" font-size="12" fill="var(--text-secondary)">한 번에 · GPU 빠름</text>
+                                    <path d="M170 46 C224 46 234 68 256 74" fill="none" stroke="var(--primary)" stroke-width="2.5" marker-end="url(#arr)"/>
+                                    <path d="M170 108 C224 108 234 82 256 76" fill="none" stroke="var(--secondary)" stroke-width="2.5" marker-end="url(#arr)"/>
+                                    <rect x="258" y="52" width="118" height="46" rx="8" fill="rgba(245,78,0,0.08)" stroke="var(--accent)" stroke-width="2"/><text x="317" y="72" text-anchor="middle" font-size="15" fill="var(--accent)" font-weight="700">같은 결과</text><text x="317" y="89" text-anchor="middle" font-size="11.5" fill="var(--text-secondary)">수학적으로 동일</text>
                                 </svg>
                             </div>
-                            <div style="font-size: 13px; color: var(--secondary); font-weight:600;">⬇ 그래서 시퀀스를 블록으로 나눠 두 방식을 혼합</div>
-                            <div class="block-decomp-viz">
-                                <div class="decomp-chunk" id="chunk1">Block 1<br><span style="font-size:11px;color:var(--text-secondary);">내부=어텐션</span></div>
-                                <div class="decomp-arrow">➔</div>
-                                <div class="decomp-chunk" id="chunk2">Block 2<br><span style="font-size:11px;color:var(--text-secondary);">내부=어텐션</span></div>
-                                <div class="decomp-arrow">➔</div>
-                                <div class="decomp-chunk" id="chunk3">Block 3<br><span style="font-size:11px;color:var(--text-secondary);">내부=어텐션</span></div>
-                            </div>
-                            <div style="font-size:11.5px; color:var(--text-secondary); text-align:center;">블록 <span style="color:var(--secondary)">내부</span>는 어텐션식(빠름), 블록 <span style="color:var(--primary)">사이</span>는 SSM식(메모리↓)</div>
-                            <button class="btn-slide" onclick="triggerSSDAnim()">블록 전이 애니메이션 ▶</button>
+                            <div style="font-size:15px; color:var(--text-secondary); text-align:center; line-height:1.6;">두 길이 <span class="bold" style="color:var(--accent);">같은 곳에 도착</span>하니, 한 모델 안에 <span class="bold">번갈아 넣어도 자연스럽게 이어짐.</span></div>
                         </div>
                     </div>
                 </div>
@@ -2403,41 +2378,43 @@
             <div class="slide" id="s-hybrid" data-topic="7. 하이브리드 아키텍처">
                 <div class="slide-title-wrapper">
                     <span class="slide-step">Part 3 · 하이브리드</span>
-                    <h2 class="slide-title">하이브리드 아키텍처: Jamba · MambaVision</h2>
-                    <p class="slide-subtitle">순수 Mamba의 retrieval 약점을 Attention 레이어를 교차 배치해 보완</p>
+                    <h2 class="slide-title">하이브리드 구조</h2>
+                    <p class="slide-subtitle">대부분 Mamba(효율) + 가끔 어텐션(정확히 찾기), 일정 간격 교차</p>
                 </div>
                 <div class="grid-2">
                     <div class="glass-card">
                         <div class="card-header">
                             <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v18M16 3v18M3 8h18M3 16h18"/></svg></div>
-                            <h3 class="card-title">왜 섞는가</h3>
+                            <h3 class="card-title">실제 사례</h3>
                         </div>
                         <div class="card-body">
-                            <ul>
-                                <li><span class="bold">Jamba (AI21, 언어)</span>: Transformer·Mamba 레이어를 교차 배치 + MoE. 효율(Mamba)과 retrieval 품질(Attention)을 동시 확보, 256K 장문맥. 1.5 Mini는 12B·Large는 94B 활성 파라미터(MoE).</li>
-                                <li><span class="bold">MambaVision (NVIDIA, 비전)</span>: 후반부 레이어에만 self-attention을 재투입 → ImageNet/COCO에서 강한 정확도·처리량 절충 (CVPR 2025).</li>
-                                <li><span class="bold">BlackMamba</span>: Mamba mixer + MoE FFN으로 희소 용량 확장.</li>
-                                <li><span class="bold">교훈</span>: 2024–26 흐름은 "Transformer 종식"이 아니라 <span class="bold">SSM과 Attention의 역할 분담</span>.</li>
+                            <div style="padding:12px 14px; background:rgba(245,78,0,0.06); border:1px solid var(--primary); border-radius:10px; font-size:15.5px; line-height:1.6; margin-bottom:12px;">
+                                기본 아이디어 — <span class="bold">층의 대부분은 Mamba</span>(빠르고 메모리 적음), <span class="bold">일정 간격마다 어텐션 층 하나</span>. Mamba가 약한 '정확히 찾아오기'를 그 어텐션 층이 담당.
+                            </div>
+                            <ul style="font-size:15.5px; line-height:1.65;">
+                                <li><span class="bold">Jamba</span> (언어) — Mamba 층 사이사이에 어텐션 교차. 매우 긴 문맥(256K)을 효율적으로 처리.</li>
+                                <li><span class="bold">MambaVision</span> (이미지) — 뒷부분 층에만 어텐션 배치, 정확도와 속도를 함께.</li>
+                                <li><span class="bold">교훈</span> — "트랜스포머의 끝"이 아니라 <span class="bold">둘의 역할 분담</span>.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="glass-card">
                         <div class="card-header">
                             <div class="card-icon emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 9h16M4 15h16"/></svg></div>
-                            <h3 class="card-title">인터리브 스택 (예: Jamba 블록)</h3>
+                            <h3 class="card-title">층을 어떻게 쌓나</h3>
                         </div>
                         <div class="figure-box" style="flex-direction:column;">
                             <div class="interleave-stack">
-                                <div class="il-row il-mamba">Mamba (SSM) 레이어</div>
-                                <div class="il-row il-mamba">Mamba (SSM) 레이어</div>
-                                <div class="il-row il-mamba">Mamba (SSM) 레이어 + MoE</div>
-                                <div class="il-row il-attn">Attention 레이어 ★ retrieval</div>
-                                <div class="il-row il-mamba">Mamba (SSM) 레이어</div>
-                                <div class="il-row il-mamba">Mamba (SSM) 레이어 + MoE</div>
-                                <div class="il-row il-mamba">Mamba (SSM) 레이어</div>
-                                <div class="il-row il-attn">Attention 레이어 ★ retrieval</div>
+                                <div class="il-row il-mamba">Mamba 층</div>
+                                <div class="il-row il-mamba">Mamba 층</div>
+                                <div class="il-row il-mamba">Mamba 층</div>
+                                <div class="il-row il-attn">어텐션 층 ★ 정확히 찾아오기</div>
+                                <div class="il-row il-mamba">Mamba 층</div>
+                                <div class="il-row il-mamba">Mamba 층</div>
+                                <div class="il-row il-mamba">Mamba 층</div>
+                                <div class="il-row il-attn">어텐션 층 ★ 정확히 찾아오기</div>
                             </div>
-                            <div class="mini-note" style="text-align:center; margin-top:10px;">대부분 SSM(주황)으로 효율 확보 + 소수 Attention(청록)으로 전역 회상 — 일정 주기마다 교차.</div>
+                            <div class="mini-note" style="text-align:center; margin-top:12px; font-size:14.5px;">대부분 <span style="color:var(--primary); font-weight:700;">Mamba(효율)</span> + 가끔 <span style="color:var(--secondary); font-weight:700;">어텐션(정확히 찾기)</span> — 일정 간격마다 교차.</div>
                         </div>
                     </div>
                 </div>
@@ -2447,25 +2424,27 @@
             <div class="slide" id="s-vmamba" data-topic="8. 도메인별 확장 아키텍처">
                 <div class="slide-title-wrapper">
                     <span class="slide-step">Part 3 · 도메인 확장</span>
-                    <h2 class="slide-title">2D/3D 비선형 시퀀스 적응과 도메인 확장</h2>
-                    <p class="slide-subtitle">이미지, 동영상, 3D 구조 데이터를 스캔하는 다양한 방법론</p>
+                    <h2 class="slide-title">이미지 처리</h2>
+                    <p class="slide-subtitle">Mamba는 '한 줄로 읽는' 방식 — 2차원 이미지는 '읽는 순서'를 새로 설계</p>
                 </div>
-                <div class="grid-3">
+                <div class="grid-2">
                     <div class="glass-card">
                         <div class="card-header">
                             <div class="card-icon">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
                             </div>
-                            <h3 class="card-title">Vision Mamba (VMamba)</h3>
+                            <h3 class="card-title">문제와 해법 — 이미지를 어떻게 읽나</h3>
                         </div>
                         <div class="card-body">
-                            <p>이미지는 2차원 평면 데이터이므로 1차원 causal 스캔을 쓰면 인접 화소 관계가 단절됩니다.</p>
-                            <div style="display:flex; justify-content:center; margin: 15px 0;">
+                            <div style="padding:12px 14px; background:rgba(180,83,9,0.06); border:1px solid var(--accent); border-radius:10px; font-size:15.5px; line-height:1.6; margin-bottom:12px;">
+                                <span class="bold">문제</span> — 이미지는 가로·세로 2차원임. 글처럼 한 줄로 쭉 펴면, 위아래로 <span class="bold">붙어 있던 이웃 픽셀이 멀어져</span> 관계가 끊김.
+                            </div>
+                            <div style="display:flex; justify-content:center; margin: 6px 0 12px;">
                                 <div class="vmamba-grid-box" id="pixelGrid">
                                     <!-- 4x4 Grid elements created via JS -->
                                 </div>
                             </div>
-                            <div style="font-size:12px; color:var(--text-secondary); text-align:center;">▶ 자동 재생 — 4방향 동시 스캔으로 모든 화소가 전역 문맥 확보</div>
+                            <div style="font-size:15.5px; line-height:1.6;"><span class="bold" style="color:var(--primary);">해법</span> — 한 방향이 아니라 <span class="bold">여러 방향(가로·세로·역방향)으로 스캔</span>함. 그러면 모든 픽셀이 <span class="bold">사방 이웃의 정보</span>를 받음. (위 격자가 그 4방향 스캔)</div>
                         </div>
                     </div>
                     <div class="glass-card">
@@ -2473,30 +2452,13 @@
                             <div class="card-icon emerald">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 2A2.5 2.5 0 0 0 2 4.5V14a5 5 0 0 0 5 5h3.5M22 4.5A2.5 2.5 0 0 0 19.5 2h-5v5h5A2.5 2.5 0 0 0 22 4.5zM12 19h1a5 5 0 0 0 5-5V7"/></svg>
                             </div>
-                            <h3 class="card-title">의료 영상 및 3D</h3>
+                            <h3 class="card-title">적용 분야</h3>
                         </div>
                         <div class="card-body emerald">
-                            <p><span class="bold">초고해상도 CT/MRI 분할</span></p>
-                            <ul>
-                                <li><span class="bold">U-Mamba</span>: 로컬 디테일(Conv)과 글로벌 장기 의존성(SSM) 결합</li>
-                                <li><span class="bold">SegMamba</span>: 3D 볼륨 장거리 맥락 정보 전역 일괄 갱신</li>
-                                <li><span class="bold">PointMamba</span>: 공간을 연속 스캔하는 Hilbert Space-Filling Curve로 비순차 데이터 시퀀스화</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="glass-card">
-                        <div class="card-header">
-                            <div class="card-icon amber">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
-                            </div>
-                            <h3 class="card-title">하이브리드 & 복원</h3>
-                        </div>
-                        <div class="card-body">
-                            <p><span class="bold">Attention의 재결합</span></p>
-                            <ul>
-                                <li><span class="bold">Jamba (Language)</span>: Mamba와 Attention 레이어의 교차 배치 및 MoE 채택</li>
-                                <li><span class="bold">MambaVision (Vision)</span>: 상위 레이어에 어텐션을 배치하여 이미지 분류 최적화</li>
-                                <li><span class="bold">MambaIR & ZigMa</span>: 저수준 픽셀 복원용 지그재그 스캔 및 국소성 필터링 보완</li>
+                            <ul style="font-size:16px; line-height:1.7;">
+                                <li><span class="bold">의료영상 (CT·MRI)</span> — 해상도가 매우 커서 어텐션의 제곱 비용이 치명적. <span class="bold">Mamba의 선형 비용이 특히 유리.</span></li>
+                                <li><span class="bold">긴 영상·3D 점데이터</span> — 프레임이나 3차원 점도 '읽는 순서'만 잘 정하면 Mamba로 처리 가능.</li>
+                                <li><span class="bold">공통 교훈</span> — 순서 없는 데이터에선 <span class="bold">'어떤 순서로 읽을지' 설계가 성능을 좌우.</span></li>
                             </ul>
                         </div>
                     </div>
@@ -2507,22 +2469,22 @@
             <div class="slide" id="s-conclusion" data-topic="Conclusion">
                 <div class="slide-title-wrapper">
                     <span class="slide-step">Conclusion</span>
-                    <h2 class="slide-title">Mamba 패러다임이 여는 미래</h2>
-                    <p class="slide-subtitle">Transformer 독점 종식과 하이브리드 백본의 부상</p>
+                    <h2 class="slide-title">Mamba의 현재 한계</h2>
+                    <p class="slide-subtitle">강력한 새 축이지만, 아직 트랜스포머를 완전히 대체하진 못함</p>
                 </div>
                 <div class="grid-2">
                     <div class="glass-card">
                         <div class="card-header">
-                            <div class="card-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.25-2.5 3.5-2.5 3.5s2.25-1 3.5-2.5M14 3l-3.5 3.5L6 9l-2 4 4 4 4-2 2.5-4.5L18 7l3-4-4 3z"/></svg>
+                            <div class="card-icon amber">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
                             </div>
-                            <h3 class="card-title">핵심 테이크어웨이</h3>
+                            <h3 class="card-title">주요 한계</h3>
                         </div>
                         <div class="card-body">
-                            <ul>
-                                <li><span class="bold">선형 성능 실현</span>: 초장문 텍스트, 장시간 비디오, 3차원 생체의학 분석 등 극한 상황에서 진정한 연산 비용 최적화 제공</li>
-                                <li><span class="bold">이론적 정밀도</span>: Mamba-2를 통해 SSM이 트랜스포머의 어텐션과 동등함을 증명하여 SSM 모델의 수학적 지위 격상</li>
-                                <li><span class="bold">도메인 융합</span>: 단순 자연어 처리를 넘어 컴퓨터 비전, 포인트 클라우드, 오디오 전 장르로 아키텍처 성숙 단계 진입</li>
+                            <ul style="font-size:16px; line-height:1.75;">
+                                <li><span class="bold">정확히 찾아오기 약함</span> — 특정 단어를 콕 집어 회상하는 능력이 어텐션보다 부족.</li>
+                                <li><span class="bold">읽는 순서 미표준</span> — 이미지·3D처럼 순서 없는 데이터의 범용 스캔 방법 부재.</li>
+                                <li><span class="bold">초대형 검증 부족</span> — 아주 큰 모델에서 트랜스포머만큼 안정적인지 검증 필요.</li>
                             </ul>
                         </div>
                     </div>
@@ -2531,16 +2493,19 @@
                             <div class="card-icon emerald">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A7 7 0 0 0 5.07 6.21C4.7 7.6 5 9 5.5 10c.8.8 1.3 1.5 1.5 2.5M9 18h6M10 22h4"/></svg>
                             </div>
-                            <h3 class="card-title">남겨진 도전 과제</h3>
+                            <h3 class="card-title">그럼에도 — 강한 영역</h3>
                         </div>
                         <div class="card-body emerald">
-                            <ul>
-                                <li><span class="bold">완벽한 연상 능력 복구</span>: 정보 유실 압축 한계를 우회할 최적의 Attention-SSM 하이브리드 비율 정형화 필요</li>
-                                <li><span class="bold">범용 스캔 표준화</span>: 비순차 2D/3D 데이터에 어텐션처럼 임베딩만으로 대응 가능한 전역 공용 스캐너의 탐색</li>
-                                <li><span class="bold">대규모 스케일링 검증</span>: 100B 이상의 초거대 파라미터 영역에서 강력한 LLM 트랜스포머 대비 안정성 확보</li>
+                            <ul style="font-size:16px; line-height:1.75;">
+                                <li><span class="bold">긴 입력</span> — 아주 긴 글·영상, 고해상도 이미지처럼 입력이 클수록 강점.</li>
+                                <li><span class="bold">상수 메모리</span> — 문맥이 길어져도 메모리가 늘지 않아 저지연·저비용.</li>
+                                <li><span class="bold">현실적 방향</span> — 완전 대체가 아니라, 어텐션과 섞는 하이브리드로 각자의 강점 활용.</li>
                             </ul>
                         </div>
                     </div>
+                </div>
+                <div style="text-align:center; margin-top:10px;">
+                    <button class="btn-slide" style="font-size:16px; padding:12px 24px;" onclick="goToSlide('s-idea1')">💡 보너스 — 확산 × Mamba를 섞으면? (내 연구 아이디어) →</button>
                 </div>
             </div>
 
@@ -2584,9 +2549,136 @@
                                 <li><span class="bold">Llama 4</span>: Meta AI Blog, 2025 (Scout/Maverick/Behemoth) <span class="pill-tag pill-fact">FACT</span></li>
                                 <li><span class="bold">Gemini 3 Pro / GPT-5·5.1</span>: 공식 발표 + 업계 보도 <span class="pill-tag pill-est">EST</span> (세부 아키텍처 비공개)</li>
                             </ul>
-                            <div class="mini-note">※ 비공개 모델 수치는 추정/보도 기반이며 공식 스펙이 아닙니다.</div>
+                            <div class="mini-note">※ 비공개 모델 수치는 추정/보도 기반이며 공식 스펙이 아님.</div>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <!-- ===== 보너스: 아이디에이션 (MD³) ===== -->
+            <div class="slide" id="s-idea1" data-topic="💡 보너스 · 아이디에이션 (MD³)">
+                <div class="slide-title-wrapper">
+                    <span class="slide-step">💡 IDEATION · 보너스 트랙</span>
+                    <h2 class="slide-title">생성 방식 — 자기회귀 vs 확산</h2>
+                    <p class="slide-subtitle">자기회귀는 단어를 하나씩, 확산은 문장 전체를 동시에 정정</p>
+                </div>
+                <div class="grid-2">
+                    <div class="glass-card">
+                        <div class="card-header">
+                            <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h10M4 17h7"/></svg></div>
+                            <h3 class="card-title">① 자기회귀 (지금까지의 방식)</h3>
+                        </div>
+                        <div class="card-body">
+                            <div style="padding:14px 16px; background:rgba(15,118,110,0.06); border:1px solid var(--secondary); border-radius:12px; font-size:16px; line-height:1.65;">
+                                단어를 <span class="bold">왼쪽 → 오른쪽으로 하나씩</span> 만듦. 한 번 뱉은 단어는 <span class="bold">다시 못 고침.</span> 그리고 한 번에 하나씩이라 <span class="bold">단일 사용자에겐 느림.</span>
+                            </div>
+                            <div class="figure-box" style="min-height:0; padding:14px; margin-top:12px;">
+                                <svg viewBox="0 0 360 70" style="width:100%" font-family="JetBrains Mono" font-size="13">
+                                    <rect x="10" y="22" width="58" height="28" rx="6" fill="var(--bg-block-layer)" stroke="var(--border)"/><text x="39" y="40" text-anchor="middle" fill="var(--text-primary)">The</text>
+                                    <rect x="86" y="22" width="58" height="28" rx="6" fill="var(--bg-block-layer)" stroke="var(--border)"/><text x="115" y="40" text-anchor="middle" fill="var(--text-primary)">cat</text>
+                                    <rect x="162" y="22" width="58" height="28" rx="6" fill="rgba(245,78,0,0.12)" stroke="var(--primary)"/><text x="191" y="40" text-anchor="middle" fill="var(--primary)">sat</text>
+                                    <rect x="238" y="22" width="58" height="28" rx="6" fill="none" stroke="var(--border)" stroke-dasharray="4 3"/><text x="267" y="40" text-anchor="middle" fill="var(--text-secondary)">?</text>
+                                    <path d="M68 36h18M144 36h18M220 36h18" stroke="var(--text-secondary)" stroke-width="1.6" marker-end="url(#arr)"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass-card">
+                        <div class="card-header">
+                            <div class="card-icon emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4 12H2M22 12h-2M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/><circle cx="12" cy="12" r="4"/></svg></div>
+                            <h3 class="card-title">② 확산 (Diffusion) 생성</h3>
+                        </div>
+                        <div class="card-body">
+                            <div style="padding:14px 16px; background:rgba(245,78,0,0.06); border:1px solid var(--primary); border-radius:12px; font-size:16px; line-height:1.65;">
+                                문장 전체를 <span class="bold">흐릿하게(빈칸으로)</span> 깔아놓고, <span class="bold">여러 번 반복</span>하며 동시에 또렷하게 채움. → <span class="bold">병렬이라 빠르고</span>, 틀린 단어를 <span class="bold">다시 고칠 수 있음(자기수정).</span>
+                            </div>
+                            <div class="figure-box" style="min-height:0; padding:14px; margin-top:12px;">
+                                <svg viewBox="0 0 360 70" style="width:100%" font-family="JetBrains Mono" font-size="12">
+                                    <text x="6" y="20" font-size="11" fill="var(--text-secondary)">반복 ↓</text>
+                                    <g><rect x="60" y="8" width="40" height="18" rx="4" fill="none" stroke="var(--border)" stroke-dasharray="3 2"/><rect x="105" y="8" width="40" height="18" rx="4" fill="none" stroke="var(--border)" stroke-dasharray="3 2"/><rect x="150" y="8" width="40" height="18" rx="4" fill="none" stroke="var(--border)" stroke-dasharray="3 2"/><rect x="195" y="8" width="40" height="18" rx="4" fill="none" stroke="var(--border)" stroke-dasharray="3 2"/><text x="250" y="21" font-size="10" fill="var(--text-secondary)">전부 빈칸</text></g>
+                                    <g><rect x="60" y="44" width="40" height="18" rx="4" fill="rgba(245,78,0,0.12)" stroke="var(--primary)"/><text x="80" y="57" text-anchor="middle" fill="var(--primary)">The</text><rect x="105" y="44" width="40" height="18" rx="4" fill="rgba(245,78,0,0.12)" stroke="var(--primary)"/><text x="125" y="57" text-anchor="middle" fill="var(--primary)">cat</text><rect x="150" y="44" width="40" height="18" rx="4" fill="rgba(245,78,0,0.12)" stroke="var(--primary)"/><text x="170" y="57" text-anchor="middle" fill="var(--primary)">sat</text><rect x="195" y="44" width="40" height="18" rx="4" fill="rgba(245,78,0,0.12)" stroke="var(--primary)"/><text x="215" y="57" text-anchor="middle" fill="var(--primary)">on</text><text x="250" y="57" font-size="10" fill="var(--primary)">동시에 또렷</text></g>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide" id="s-idea2" data-topic="💡 보너스 · 확산 × Mamba (MD³)">
+                <div class="slide-title-wrapper">
+                    <span class="slide-step">💡 IDEATION · 내 아이디어</span>
+                    <h2 class="slide-title">확산 × Mamba (MD³)</h2>
+                    <p class="slide-subtitle">Jamba가 Transformer+Mamba를 섞었듯, 확산 생성의 '속(백본)'을 Mamba로 바꾸면?</p>
+                </div>
+                <div class="grid-2">
+                    <div class="glass-card">
+                        <div class="card-header">
+                            <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg></div>
+                            <h3 class="card-title">문제 → 해법</h3>
+                        </div>
+                        <div class="card-body">
+                            <ul style="font-size:16px; line-height:1.7;">
+                                <li><span class="bold" style="color:var(--secondary);">확산의 장점</span> — 병렬 생성(빠름) + 자기수정(품질).</li>
+                                <li><span class="bold" style="color:var(--danger);">그런데 문제</span> — 지금 확산 모델도 <span class="bold">속이 Transformer</span>라, 우리가 본 <span class="bold">O(L²) + 메모리 증가</span>가 또 나옴.</li>
+                                <li><span class="bold" style="color:var(--primary);">해법(MD³)</span> — 속을 <span class="bold">Mamba로 교체</span>. 병렬 생성은 그대로 두고, 비용은 <span class="bold">선형 + 메모리 상수</span>로.</li>
+                            </ul>
+                            <div class="mini-note" style="font-size:14.5px;">정직하게 — 이런 방향(<span class="bold">DiffuApriel</span>, 2025)이 이미 막 시작됐음. <span class="bold">내 MD³의 차별점</span> = ① 장문에서도 <span class="bold">메모리 상수</span>(상태 캐시), ② <span class="bold">Mamba-3 회전</span>을 앞뒤 양방향으로.</div>
+                        </div>
+                    </div>
+                    <div class="glass-card">
+                        <div class="card-header">
+                            <div class="card-icon emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v6M12 17v6M4.2 4.2l4.3 4.3M15.5 15.5l4.3 4.3"/></svg></div>
+                            <h3 class="card-title">문제 해결 의도</h3>
+                        </div>
+                        <div class="card-body">
+                            <ul style="font-size:15.5px; line-height:1.65;">
+                                <li><span class="bold">왜 확산?</span> 병렬·자기수정 → 단일 사용자 지연을 낮춤.</li>
+                                <li><span class="bold">왜 Mamba?</span> 확산의 두 비용(O(L²)·메모리 증가)을 <span class="bold">정확히</span> 없애는 게 선형·고정메모리 SSM.</li>
+                                <li><span class="bold">왜 양방향?</span> 확산은 '빈칸 채우기'라 <span class="bold">앞뒤를 다 봐야</span> 함 → Mamba를 정/역 두 방향으로 굴림.</li>
+                                <li><span class="bold">왜 어텐션을 조금?</span> Mamba 혼자선 <span class="bold">'정확히 찾아오기'(검색)</span>가 약해 소수 어텐션 층으로 보강.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide" id="s-idea3" data-topic="💡 보너스 · 장단점">
+                <div class="slide-title-wrapper">
+                    <span class="slide-step">💡 IDEATION · 정직한 평가</span>
+                    <h2 class="slide-title">장점 vs 정직한 한계</h2>
+                    <p class="slide-subtitle">효율은 좋아지지만, 품질은 별도 보강 필요</p>
+                </div>
+                <div class="grid-2">
+                    <div class="glass-card">
+                        <div class="card-header">
+                            <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11v10M2 11h5l3-8a2 2 0 0 1 4 0v8h5a2 2 0 0 1 2 2l-2 7H4z"/></svg></div>
+                            <h3 class="card-title">기대 장점</h3>
+                        </div>
+                        <div class="card-body">
+                            <ul style="font-size:16px; line-height:1.75;">
+                                <li><span class="bold">저지연</span> — 병렬 생성으로 단일 사용자 응답이 빠름.</li>
+                                <li><span class="bold">메모리 상수</span> — 아무리 긴 글을 써도 메모리가 일정.</li>
+                                <li><span class="bold">자기수정</span> — 틀린 단어를 다시 마스킹·정정.</li>
+                                <li><span class="bold">상태추적</span> — Mamba-3 회전이 규칙적 패턴(짝/홀 등)에 강함.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="glass-card">
+                        <div class="card-header">
+                            <div class="card-icon amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+                            <h3 class="card-title">정직한 한계</h3>
+                        </div>
+                        <div class="card-body emerald">
+                            <ul style="font-size:16px; line-height:1.75;">
+                                <li><span class="bold">효율만</span> 확실히 상보적 — <span class="bold">품질·검색</span>은 자동으로 안 됨 → 소수 어텐션 + 자기수정으로 <span class="bold">근거 기반 보강</span>.</li>
+                                <li><span class="bold">아직 설계·이론 단계</span> — 실험 검증은 앞으로.</li>
+                                <li><span class="bold">헤드라인은 선점</span>(확산×Mamba) — 내 델타는 <span class="bold">상수 메모리·회전 양방향</span>.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align:center; margin-top:10px;">
+                    <button class="btn-slide secondary" style="font-size:14px; padding:9px 18px;" onclick="goToSlide('s-conclusion')">← 발표 마무리로 돌아가기</button>
                 </div>
             </div>
 
@@ -2749,6 +2841,12 @@
                     currentSlide--;
                     updateSlide();
                 }
+            }
+        }
+
+        function goToSlide(id) {
+            for (let i = 0; i < slides.length; i++) {
+                if (slides[i].id === id) { currentSlide = i; updateSlide(); break; }
             }
         }
 
@@ -3765,7 +3863,7 @@
 
                 kvBarFill.style.width = '33%';
                 kvMemoryText.textContent = `Size: 2 Tokens (K, V vectors cached)`;
-                autoregExpl.innerHTML = `[Step 1] 입력된 프롬프트 <strong>"The cat"</strong>의 Key, Value 벡터를 계산하여 메모리(KV Cache)에 적재합니다.`;
+                autoregExpl.innerHTML = `[1단계] 입력 <strong>"The cat"</strong>의 정보를 메모리(KV Cache)에 적재.`;
                 autoregStep++;
                 return;
             }
@@ -3790,8 +3888,7 @@
             kvMemoryText.textContent = `Size: ${autoregSequence.length} Tokens (${autoregSequence.length} K/V vectors cached)`;
             
             autoregExpl.innerHTML = `
-                [Step ${autoregStep + 1}] 새 토큰 <strong>"${nextTok}"</strong>을 예측하기 위해 기존 토큰들과 $O(L^2)$ Attention 연산을 수행합니다.<br>
-                과거 연산 재방지를 위해 현재까지의 Key/Value를 계속 메모리(<span style="color:var(--primary-light)">KV Cache</span>)에 캐싱하여 누적합니다.
+                [${autoregStep + 1}단계] 새 단어 <strong>"${nextTok}"</strong>을 만들며, 이전 단어들의 정보를 <span style="color:var(--primary-light)">메모리(KV Cache)</span>에 계속 쌓임.
             `;
 
             autoregStep++;
@@ -3826,7 +3923,7 @@
             document.getElementById('kvBarFill').style.width = '0%';
             document.getElementById('kvMemoryText').textContent = 'Size: 0 Tokens';
             document.getElementById('attnGridViz').innerHTML = '';
-            document.getElementById('autoregExpl').textContent = "대기 중. [자동 생성 실행]을 누르면 디코딩 시뮬레이션이 가동됩니다.";
+            document.getElementById('autoregExpl').textContent = "자동 생성 중…";
         }
 
         // [Slide 6: RNN Decoding Animation]
@@ -3846,7 +3943,7 @@
             const tick = () => {
                 if (currentStep >= steps.length) {
                     clearInterval(rnnTimer);
-                    rnnStatus.innerHTML = `완료! 문장 전체가 <b>메모리 하나</b>에 요약되었습니다.`;
+                    rnnStatus.innerHTML = `완료! 문장 전체가 <b>메모리 하나</b>에 요약됨.`;
                     return;
                 }
                 document.querySelectorAll('.rnn-step-box').forEach(el => el.classList.remove('active'));
@@ -3866,7 +3963,7 @@
             clearInterval(rnnTimer);
             document.querySelectorAll('.rnn-step-box').forEach(el => el.classList.remove('active'));
             document.getElementById('rnnValue').textContent = "(비어 있음)";
-            document.getElementById('rnnStatus').textContent = "단어를 읽을 때마다 메모리에 요약을 누적합니다";
+            document.getElementById('rnnStatus').textContent = "단어를 읽을 때마다 메모리에 요약을 누적";
         }
 
         // [Slide 7: Mamba Selective Gate Simulator]
@@ -3967,12 +4064,10 @@
 
         function resetSSDAnim() {
             clearInterval(ssdTimer);
-            const chunks = [
-                document.getElementById('chunk1'),
-                document.getElementById('chunk2'),
-                document.getElementById('chunk3')
-            ];
-            chunks.forEach(c => c.classList.remove('active'));
+            ['chunk1','chunk2','chunk3'].forEach(id => {
+                const c = document.getElementById(id);
+                if (c) c.classList.remove('active');
+            });
         }
 
         // [Slide 9: VMamba 2D Grid Cross-Scan Simulation]
